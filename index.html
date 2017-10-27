@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Guess Who</title>
+    <script src="angular.min.js"></script>
+    <script src="client.js"></script>
+</head>
+<body ng-app = "myApp">
+    <h1>Guess who</h1>
+    <div ng-controller="GuessWhoController as guess">
+            Hello {{guess.people}};
+            <p>{{}}</p>
+            <p>Enter name:</p><input type="text" ng-model="guess.nameIn">
+            <p>Enter github:</p><input type="text" ng-model="guess.githubIn">
+            <button ng-click="guess.addPeople()">Add person</button>
+            {{nameIn}}{{githubIn}}
+            <div ng-repeat="person in guess.people">
+                    
+                    <!-- ng-show, ng-hide and ng-if all hide or show html on the page -->
+                    <img ng-click="guess.displayName(person)" ng-src="https://github.com/{{person.github}}.png?size=80"> 
+    
+
+    
+   <!-- <input type="text" ng-model="people.name"> -->
+
+    <!-- <input type="text" ng-model="people.github">
+    <button ng-click = "appendPeople">Submit button</button> -->
+     
+  
+            <!-- var person = welcome.people[i] -->
+            
+    </div>
+
+    
+    </div>
+</body>
+</html>
