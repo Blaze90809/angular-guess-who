@@ -11,7 +11,7 @@
 <body ng-app = "myApp">
     <h1>Guess who</h1>
     <div ng-controller="GuessWhoController as guess">
-            Hello {{guess.people}};
+            Hello {{guess.message}};
             <p>{{}}</p>
             <p>Enter name:</p><input type="text" ng-model="guess.nameIn">
             <p>Enter github:</p><input type="text" ng-model="guess.githubIn">
@@ -21,7 +21,7 @@
                     
                     <!-- ng-show, ng-hide and ng-if all hide or show html on the page -->
                     <img ng-click="guess.displayName(person)" ng-src="https://github.com/{{person.github}}.png?size=80"> 
-    
+                    
 
     
    <!-- <input type="text" ng-model="people.name"> -->

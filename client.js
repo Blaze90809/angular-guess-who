@@ -11,7 +11,7 @@ guess.addPeople = function (person){
 
 guess.displayName = function(person){
     
-   var personMessage = ("This is" + person.name);
+   guess.message = ("This is" + person.name);
 };
  
 var people = [{name: 'Sarah', github: 'SarahHarrington'}, 
